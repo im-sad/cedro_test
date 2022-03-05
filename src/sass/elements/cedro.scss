@@ -1,0 +1,28 @@
+.cedro {
+  @include font-size(14px, 18px);
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: $color-white-hover;
+  text-decoration: none;
+  user-select: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-white-light;
+  }
+
+  &__title {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__icn {
+    display: inline-block;
+    vertical-align: middle;
+    flex: 0 0 auto;
+    margin-left: 8px;
+    width: 13px;
+    height: 11px;
+  }
+}

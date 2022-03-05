@@ -1,0 +1,27 @@
+@import 'system/mix';
+@import 'system/vars';
+
+// Global
+@import 'system/fonts';
+@import 'system/reset';
+// @import '../../node_modules/normalize.css/normalize';
+@import 'system/animations';
+@import 'system/core';
+@import 'system/typography';
+@import 'system/utils';
+
+// Vendor
+@import '../../node_modules/swiper/swiper';
+@import 'vendor/bootstrap-grid.scss';
+
+// Elements
+@import 'elements/*.scss';
+
+// Blocks
+@import 'blocks/*.scss';
+
+// Sections
+@import 'sections/*.scss';
+
+// pages
+@import 'pages/*.scss';

@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="width-fluid">
+
+    <div class="header__table">
+      <div class="header__table-logo">
+        <a class="header__logo logo" href="/" title="На главную">
+          <img class="logo__img" src="./img/bg/logo.svg" alt="CEDRO" width="91" height="32" />
+        </a>
+      </div>
+
+      <div class="header__table-menu">
+        @@include("../blocks/header-menu.html")
+      </div>
+
+      <div class="header__table-info">
+        <a href="tel:88005553535" class="header-phone header__phone">
+          <svg class="header-phone__icn icn">
+            <use xlink:href="#icn-phone" />
+          </svg>
+          <span class="header-phone__span">8 (800) 555-35-35</span>
+        </a>
+
+        @@include("../blocks/fast-links.html")
+
+        <button role="button" aria-label="Открыть меню" class="header__menu-btn menu-btn" id="js-open-menu">
+          <span class="menu-btn__in">&nbsp;</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</header>

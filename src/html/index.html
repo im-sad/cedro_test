@@ -1,0 +1,53 @@
+@@include("./system/head.html", {"title": "Главная"})
+<style>
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+
+  .container {
+    padding: 40px 0;
+  }
+
+  li {
+    padding: 4px 0;
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #D0BC7A;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #21242E;
+    text-decoration: none;
+  }
+</style>
+
+<main style="text-align: center;">
+  <div class="container">
+    <h1>Список страниц</h1>
+    <ol>
+      <li>
+        <a href="/ui-kit.html">UI-KIT - /ui-kit.html</a>
+      </li>
+      <li>
+        <a href="/profile.html">Профиль - /profile.html</a>
+      </li>
+    </ol>
+  </div>
+</main>
+
+
+@@include("./system/end.html")

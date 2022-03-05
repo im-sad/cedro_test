@@ -1,0 +1,76 @@
+.menu-btn {
+  @include btn-reset;
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  color: $color-text;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: color $trans-base, transform $trans-fast, opacity $trans-fast;
+  user-select: none;
+  flex: 0 0 auto;
+
+  &__in {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+  }
+
+  &__in::before,
+  &__in::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transition: transform $trans-base, top $trans-base, bottom $trans-base;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__in::before {
+    transform: translateY(9px);
+    transform-origin: 0 0;
+  }
+
+  &__in::after {
+    transform: translateY(15px);
+    transform-origin: 0 100%;
+  }
+
+  &:hover {
+    color: $color-main;
+  }
+
+  &:hover &__in::before {
+    transform: translateY(7px);
+  }
+
+  &:hover &__in::after {
+    transform: translateY(17px);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &.is-active &__in::before,
+  &.is-active &__in::after {
+    //
+  }
+
+  &.is-active &__in::before,
+  &.is-active:hover &__in::before {
+    transform: translate(4px, 4px) rotate(45deg);
+  }
+
+  &.is-active &__in::after,
+  &.is-active:hover &__in::after {
+    transform: translate(4px, 18px) rotate(-45deg);
+  }
+}

@@ -1,0 +1,35 @@
+.form-base {
+  &__caption {
+    @include title-h3;
+    display: block;
+    margin-bottom: 48px;
+    cursor: default;
+  }
+
+  &__list {
+    //
+  }
+
+  &__item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media(tablet) {
+    &__caption {
+      @include font-size(20px, 20px);
+      margin-bottom: 32px;
+    }
+
+    &__item {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

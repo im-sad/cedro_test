@@ -1,0 +1,48 @@
+.profile-nav {
+  &__item {
+    margin-bottom: 6px;
+  }
+
+  &__link {
+    @include font-size(14px, 14px);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    &:hover,
+    &.is-active {
+      text-decoration: none;
+      color: $color-main
+    }
+
+    &.is-active {
+      pointer-events: none;
+    }
+
+    &--exit:hover {
+      color: $color-danger
+    }
+  }
+
+  // Media
+  @include media(tablet) {
+    position: static;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__item {
+      margin-right: 16px;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--exit {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+}

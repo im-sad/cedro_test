@@ -1,0 +1,51 @@
+.input {
+  border: 1px solid transparent;
+  outline: none !important;
+  background: transparent;
+  transition: all $trans-base;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::placeholder {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  &--size-base {
+    @include font-size(16px, 24px);
+    height: $field-base;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.input-base {
+  border-radius: 4px;
+  background: $color-muted;
+  color: $color-text;
+
+  &::placeholder,
+  & ~ .field__icn {
+    color: $color-text-light;
+  }
+
+  &:hover,
+  &:hover ~ .field__icn {
+    color: $color-text-hover;
+  }
+
+  &:focus,
+  &:focus ~ .field__icn {
+    color: $color-text;
+  }
+
+  &.has-erorr,
+  &.has-erorr ~.field__icn {
+    color: $color-error;
+  }
+
+  &.is-valid,
+  &.is-valid ~.field__icn {
+    color: $color-main;
+  }
+}

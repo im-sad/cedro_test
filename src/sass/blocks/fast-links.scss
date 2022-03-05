@@ -1,0 +1,55 @@
+.fast-links {
+  display: flex;
+  user-select: none;
+
+  &__item {
+    //
+  }
+
+  &__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    color: $color-main;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__icn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    fill: transparent;
+  }
+
+  &__btn:active &__icn{
+    transform: scale(0.9);
+  }
+
+  &__num {
+    @include font-size(8px, 8px);
+    font-weight: 500;
+    position: absolute;
+    top: -4;
+    left: 14px;
+    color: $color-white;
+    background: $color-text;
+    border-radius: 100px;
+    padding: 2px 3px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

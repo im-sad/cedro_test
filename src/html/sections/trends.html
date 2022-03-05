@@ -1,0 +1,36 @@
+<section class="section-trends">
+  <div class="width">
+    <div class="section-trends__header">
+      <h2 class="section-trends__title title-h2 text-upper">
+        <span class="color-main">Тренды</span> сезона
+      </h2>
+
+      @@include("../elements/link-more.html", {"title": "Перейти в каталог", "classList": "section-trends__header-more"})
+    </div>
+
+
+    <div class="section-trends__core">
+
+      <div class="trends swiper" id="js-trends-list">
+        <div class="trends__list swiper-wrapper">
+          @@loop("../blocks/product.html", [
+            { "title": "My post title", "text": "<p>lorem ipsum...</p>" },
+            { "title": "Another post", "text": "<p>lorem ipsum...</p>" },
+            { "title": "My post title", "text": "<p>lorem ipsum...</p>" },
+            { "title": "Another post", "text": "<p>lorem ipsum...</p>" },
+            { "title": "My post title", "text": "<p>lorem ipsum...</p>" },
+            { "title": "Another post", "text": "<p>lorem ipsum...</p>" },
+            { "title": "My post title", "text": "<p>lorem ipsum...</p>" },
+            { "title": "Another post", "text": "<p>lorem ipsum...</p>" },
+            { "title": "My post title", "text": "<p>lorem ipsum...</p>" },
+            { "title": "Another post", "text": "<p>lorem ipsum...</p>" },
+            { "title": "One more post", "text": "<p>lorem ipsum...</p>" }
+          ])
+        </div>
+      </div>
+
+    </div>
+
+    @@include("../elements/link-more.html", {"title": "Перейти в каталог", "classList": "section-trends__catalog"})
+  </div>
+</section>

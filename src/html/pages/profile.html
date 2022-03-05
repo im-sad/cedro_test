@@ -1,0 +1,116 @@
+<div class="page page-profile">
+  <div class="width width--no-gutter">
+
+    <div class="page-profile__wrapper">
+      <aside class="page-profile__side">
+        <ul class="page-profile__side-nav profile-nav">
+          <li class="profile-nav__item">
+            <a class="profile-nav__link" href="#">Профиль</a>
+          </li>
+          <li class="profile-nav__item">
+            <a class="profile-nav__link" href="#">Мои заказы</a>
+          </li>
+          <li class="profile-nav__item profile-nav__item--exit">
+            <a class="profile-nav__link profile-nav__link--exit" href="#">Выход</a>
+          </li>
+        </ul>
+      </aside>
+
+
+      <main class="page-profile__main">
+        <div class="page-profile__head">
+          <h1 class="page-profile__title title-h1">Профиль</h1>
+        </div>
+
+        <form class="page-profile__body" action="#" id="js-form-profile">
+          <div class="page-profile__section">
+            <div class="page-profile__form form-base">
+              <h3 class="form-base__caption">Данные профиля</h3>
+              <ul class="form-base__list">
+                <li class="form-base__item">
+                  <div class="field field--size-base">
+                    <label for="user-name" class="field__label">ФИО</label>
+                    <div class="field__wrapper">
+                      <input class="field__input field__input--size-base input input-base" id="user-name" type="text" value="Алексеева Ульяна Евгеньевна" placeholder="Ваши инициалы" />
+                    </div>
+                  </div>
+                </li>
+                <li class="form-base__item">
+                  <div class="field field--size-base">
+                    <label for="user-email" class="field__label">Почта</label>
+                    <div class="field__wrapper">
+                      <input class="field__input field__input--size-base input input-base" id="user-email" type="email" value="pochta07@mail.ru" placeholder="mail@mail.ru" />
+                    </div>
+                  </div>
+                </li>
+                <li class="form-base__item">
+                  <div class="field field--size-base">
+                    <label for="user-tel" class="field__label">Телефон</label>
+                    <div class="field__wrapper">
+                      <input class="field__input field__input--size-base input input-base" id="user-tel" type="tel" value="+7 (999) 123-45-67" placeholder="+7 (999) 999-99-99" />
+                    </div>
+                  </div>
+                </li>
+                <li class="form-base__item">
+                  <div class="field field--size-base">
+                    <label for="user-nick" class="field__label">Имя аккаунта</label>
+                    <div class="field__wrapper">
+                      <input class="field__input field__input--size-base input input-base" id="user-nick" type="text" value="Alex Y.E." placeholder="Желаемый никнейм" />
+                    </div>
+                  </div>
+                </li>
+                <li class="form-base__item">
+                  <div class="field field--size-base">
+                    <label for="user-inst" class="field__label">Профиль в инстаграм</label>
+                    <div class="field__wrapper">
+                      <input class="field__input field__input--size-base input input-base" id="user-inst" type="text" value="@Alex_YE" placeholder="Ссылка на инсту" />
+                    </div>
+                  </div>
+                </li>
+                <li class="form-base__item">
+                  <div class="field field--size-base">
+                    <label for="user-address" class="field__label">Адрес доставки</label>
+                    <div class="field__wrapper">
+                      <input class="field__input field__input--size-base input input-base" id="user-address" type="text" placeholder="Город, улица, дом" />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-profile__section">
+            <div class="page-profile__form form-base">
+              <h3 class="form-base__caption">Изменить пароль</h3>
+              <ul class="form-base__list">
+                <li class="form-base__item">
+                  <div class="field field--size-base">
+                    <label for="user-password" class="field__label">Старый пароль</label>
+                    <div class="field__wrapper">
+                      <input class="field__input field__input--has-pass field__input--size-base input input-base" id="user-password" type="password" value="7127sdf29hr3872gf" placeholder="Введите старый пароль" />
+                      <button type="button" aria-label="Показать пароль" class="field__pass js-passeye">
+                        @@include("../../img/bg/icn-eye.svg")
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="form-base__item">
+                  <div class="field field--size-base">
+                    <label for="user-password2" class="field__label">Новый пароль</label>
+                    <div class="field__wrapper">
+                      <input class="field__input field__input--has-pass field__input--size-base input input-base" id="user-password2" type="password" placeholder="Введите новый пароль" />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-profile__section">
+            <button type="submit" class="page-profile__save btn btn--radius btn--size-base btn-main">Сохранить изменения</button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+
+  </div>
+</div>

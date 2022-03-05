@@ -1,0 +1,96 @@
+.field {
+  position: relative;
+  display: block;
+
+  &__label {
+    @include text-overflow();
+    display: block;
+    margin-bottom: 12px;
+    color: $color-text-light;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__icn,
+  &__pass {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: color $trans-base;
+    fill: transparent;
+  }
+
+  &__icn {
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+  }
+
+  &__pass {
+    @include btn-reset;
+    right: 16px;
+    color: $color-text-light;
+
+    &:hover {
+      color: $color-text;
+    }
+
+    & .eye-line {
+      opacity: 0;
+      transition: opacity $trans-base;
+    }
+
+    &.is-show .eye-line {
+      opacity: 1;
+    }
+  }
+
+  &__pass-icn {
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__input {
+    width: 100%;
+
+    &--size-base {
+      @include font-size(16px, 24px);
+      height: $field-base;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    @at-root #{&}--size-base#{&}--has-icn {
+      padding-left: 40px;
+    }
+
+    @at-root #{&}--size-base#{&}--has-pass {
+      padding-right: 56px;
+    }
+  }
+
+  &__error {
+    @include font-size(14px, 18px);
+    color: $color-error;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    user-select: none;
+    pointer-events: none;
+    max-width: 100%;
+    transition: opacity $trans-base, transform $trans-base;
+  }
+
+  @include media(tablet) {
+    &__label {
+      margin-bottom: 8px;
+    }
+  }
+}

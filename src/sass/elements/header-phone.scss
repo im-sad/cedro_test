@@ -1,0 +1,48 @@
+.header-phone {
+  @include font-size(14px, 14px);
+  text-decoration: none;
+  color: $color-main;
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:hover {
+    color: $color-text;
+    text-decoration: none;
+  }
+
+  &__icn {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+    will-change: transform;
+  }
+
+  &:hover &__icn {
+    animation: tada 1s 1 ease-in-out;
+  }
+
+  &__span {
+    display: inline-block;
+  }
+
+  // Media
+  @include media(wide) {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0;
+    justify-content: center;
+
+    &__icn {
+      margin-right: 0;
+    }
+
+    &__span {
+      display: none;
+    }
+  }
+}
+

@@ -1,0 +1,23 @@
+a {
+  color: $color-link;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+.title-h1,
+.title-h2 {
+  display: block;
+  clear: both;
+  cursor: default;
+}
+
+.title-h1 {
+  @include title-h1;
+}
+
+.title-h2 {
+  @include title-h2;
+}
+

@@ -1,0 +1,84 @@
+.footer {
+  @include better-fonts;
+  @include font-size(14px, 18px);
+  min-height: 100px;
+  background: $color-section url('#{$url-img}/footer-bg.jpg') no-repeat right center;
+  background-size: cover;
+  color: $color-white-hover;
+  margin-top: auto;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  @include retina {
+    background-image: url('#{$url-img}/footer-bg@2x.jpg');
+  }
+
+  &__main {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  &__secondary {
+    border-top: 1px solid $color-border-white;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &__copy,
+  &__cedro {
+    user-select: none;
+    color: $color-white-hover;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-white-light;
+    }
+  }
+
+  &__note {
+    border-top: 1px solid $color-border-white;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    cursor: default;
+  }
+
+  // MEDIA
+  @include media(desktop) {
+    &__main {
+      padding-top: 64px;
+      padding-bottom: 40px;
+    }
+
+    &__secondary {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    &__note {
+      padding-top: 40px;
+      padding-bottom: 64px;
+    }
+  }
+
+  @include media(tablet) {
+    &__note,
+    &__secondary {
+      position: relative;
+      border-top: 0;
+
+      &::before {
+        content: '';
+        width: calc(100% - 32px);
+        height: 1px;
+        position: absolute;
+        background: $color-border-white;
+        top: -1px;
+        left: 16px;
+        pointer-events: none;
+      }
+    }
+  }
+}

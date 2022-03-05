@@ -1,0 +1,75 @@
+@mixin font-size($size, $lineHeight) {
+  font-size: $size;
+  line-height: $lineHeight / $size;
+}
+
+@mixin flex-width($width) {
+  width: $width;
+  max-width: $width;
+  flex: 0 0 $width;
+  min-width: 1px;
+}
+
+@mixin text-overflow() {
+  white-space: nowrap;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+@mixin btn-reset {
+  outline: none !important;
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+
+@mixin better-fonts() { // For dark backgrounds
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin retina {
+  @media (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+@mixin title-h1 {
+  @include font-size(80px, 80px);
+  font-weight: 400;
+}
+
+@mixin title-h2 {
+  @include font-size(48px, 56px);
+  font-weight: 500;
+}
+
+@mixin title-h3 {
+  @include font-size(24px, 24px);
+  font-weight: 500;
+}
+
+@mixin media($media) {
+  @if $media == start {
+    @media only screen and (max-width: $media-start) { @content; }
+  }
+  @else if $media == iphone {
+    @media only screen and (max-width: $media-iphone) { @content; }
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: $media-mobile) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (max-width: $media-tablet) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (max-width: $media-desktop) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (max-width: $media-wide - 1) { @content; }
+  }
+  @else if $media == hd {
+    @media only screen and (max-width: $media-hd) { @content; }
+  }
+}

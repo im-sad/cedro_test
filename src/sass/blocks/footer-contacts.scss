@@ -1,0 +1,27 @@
+.footer-contacts {
+  align-items: center;
+
+  &__cedro {
+    text-align: right;
+  }
+
+  @include media(tablet) {
+    &__soc,
+    &__copy,
+    &__cedro {
+      width: 100%;
+    }
+
+    &__soc {
+      margin-bottom: 16px;
+    }
+
+    &__copy {
+      margin-bottom: 16px;
+    }
+
+    &__cedro {
+      text-align: left;
+    }
+  }
+}
